@@ -11,13 +11,13 @@ from langchain_experimental.sql import SQLDatabaseChain
 
 bedrock=boto3.client(service_name='bedrock-runtime',
                      region_name="us-east-1",
-                     aws_access_key_id='AKIATCKATT6OKJ7I726R',
-                     aws_secret_access_key='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'
+                     aws_access_key_id='',
+                     aws_secret_access_key=''
                      )
 llm=Bedrock(model_id="amazon.titan-text-express-v1",client=bedrock,
                 model_kwargs={})
 db = SQLDatabase.from_uri(
-    "postgresql+psycopg2://bcuiaxgp:R7zlYLloY39ayyf08uQcUiet9UNnqJeF@lallah.db.elephantsql.com/bcuiaxgp",
+    "postgresql+psycopg2://your postgresdb url",
 )
 
 QUERY = """
